@@ -1,14 +1,22 @@
 #include <iostream>
 #include <set>
+#include <fstream>
+#include <string>
 using namespace std;
 
 int main() {
-    // вводится количество чисел, в следующей строке сами числа
     int n, a;
-    cin >> n;
+    string filename_in;
+    ifstream fin;
+    // вводится количество чисел, в следующей строке сами числа
+    cout << "Введите путь к входному файлу:\n";
+    cin >> filename_in;
+    fin.open(filename_in);
+
+    fin >> n;
     set<int> S; // делаем множество
     for (int i = 0; i < n; ++i) {
-        cin >> a;
+        fin >> a;
         if (S.count(a)) cout << "YES\n"; // если число уже встречалось выводим YES
         else{ // если нет – выводим NO, добавляем число в множество
             cout << "NO\n";
