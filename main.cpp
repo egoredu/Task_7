@@ -22,6 +22,5 @@ int main() {
             cout << "NO\n";
             S.insert(a);
         }
-
     }
 }
