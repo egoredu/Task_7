@@ -9,7 +9,7 @@ int main() {
     string filename_in;
     ifstream fin;
     // вводится количество чисел, в следующей строке сами числа
-    cout << "Введите путь к входному файлу:\n";
+    cout << "Enter the input file path:\n";
     cin >> filename_in;
     fin.open(filename_in);
 
